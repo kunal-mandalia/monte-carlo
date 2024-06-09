@@ -8,8 +8,8 @@ def select_random_card(chosen_cards):
     return r
 
 def get_ascending_card_range(n: int):
-    m = 12
-    k = n % m
+    unique_cards = 13 - 1 # number of unique cards irrespective of suit, zero index
+    k = n % unique_cards
     opts = map(lambda i: k + (12 * i) + 1, range(4))
     return set(opts)
 
@@ -28,7 +28,6 @@ def check_asc_cards(chosen_cards: list):
 # returns True if cards are in ascending order
 def sim():
     chosen_cards = dict()
-    card_order = 13
 
     for s in range(5):
         card = select_random_card(chosen_cards)
