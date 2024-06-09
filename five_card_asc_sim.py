@@ -31,7 +31,6 @@ def sim():
     card_order = 13
 
     for s in range(5):
-        r = random.randint(0, card_order - 1)
         card = select_random_card(chosen_cards)
         chosen_cards[s] = card
         
