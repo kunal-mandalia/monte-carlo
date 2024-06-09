@@ -24,7 +24,7 @@ def check_asc_cards(chosen_cards: list):
         if (next not in next_asc_range):
             return False
         
-# Select 5 cards at random
+# select 5 cards at random
 # returns True if cards are in ascending order
 def sim():
     chosen_cards = dict()
@@ -41,8 +41,8 @@ def sim():
 def multi_sim(sample_size = 100):
     count = 0
     for n in range(sample_size):
-        outcome = sim()
-        if outcome:
+        is_ascending = sim()
+        if is_ascending == True:
             count = count + 1
             avg = 100 * (count / (n + 1))
             print(f"n: {n}, avg: {avg}")
